@@ -6,7 +6,7 @@ export default function Home() {
       <main className="animate-fade-in">
         <div className="max-w-4xl mx-auto px-4 py-8">
           {/* Hero Section */}
-          <section className="mb-8 animate-fade-in">
+          <section className="mb-8 animate-fade-in" aria-labelledby="hero-heading">
             <div className="flex items-center gap-4 md:gap-6">
               <Image
                 src="/images/profile.png"
@@ -19,7 +19,7 @@ export default function Home() {
               <div className="flex-1 min-w-0">
                 <div className="flex items-center justify-between gap-2">
                   <div className="flex items-center gap-2">
-                    <h1 className="text-lg md:text-2xl font-bold truncate">
+                    <h1 id="hero-heading" className="text-lg md:text-2xl font-bold truncate">
                       Adriele Matthew Tosino
                     </h1>
                   </div>
@@ -27,6 +27,7 @@ export default function Home() {
 
                 <p className="text-xs md:text-sm text-foreground/70 mt-0.5 flex items-center gap-1">
                   <svg
+                    aria-hidden="true"
                     className="w-3 h-3 md:w-3.5 md:h-3.5 shrink-0"
                     fill="none"
                     stroke="currentColor"
@@ -59,6 +60,7 @@ export default function Home() {
                       className="inline-flex h-7 md:h-8 items-center rounded-lg bg-foreground px-2.5 md:px-4 text-[8px] md:text-xs font-medium text-background transition-all duration-200 hover:bg-foreground/90 hover:-translate-y-0.5 gap-1 md:gap-1.5 whitespace-nowrap min-h-0"
                     >
                       <svg
+                        aria-hidden="true"
                         className="w-4 h-4"
                         fill="none"
                         stroke="currentColor"
@@ -80,7 +82,7 @@ export default function Home() {
           </section>
 
           {/* Bento Grid */}
-          <section className="grid grid-cols-1 md:grid-cols-6 gap-2">
+          <section className="grid grid-cols-1 md:grid-cols-6 gap-2" aria-label="Portfolio content">
             {/* Tech Stack Section */}
             <div className="bento-card p-4 col-span-1 md:col-span-4 space-y-2 group animate-fade-in bg-white dark:bg-gray-800 rounded-xl shadow-[0_1px_3px_rgba(0,0,0,0.1)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.12)] transition-all duration-300">
               <div className="flex items-center justify-between">
@@ -248,45 +250,99 @@ export default function Home() {
                   <p className="text-xs text-foreground/70">
                     IoT-based adaptive traffic control
                   </p>
-                  {/* <p className="text-xs text-foreground/50 font-mono bg-gray-200 dark:bg-gray-600 px-2 py-1 rounded-md inline-block mt-1">
-                    View code
-                  </p> */}
                 </div>
                 <div className="bento-card p-3 space-y-1 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors">
                   <h3 className="text-sm font-semibold group-hover:text-blue-600">
-                    DBMS Project
+                    LAN Chat Application
                   </h3>
                   <p className="text-xs text-foreground/70">
-                    Desktop restaurant management system
+                    Offline-based realtime messaging over local network
                   </p>
-                  {/* <p className="text-xs text-foreground/50 font-mono bg-gray-200 dark:bg-gray-600 px-2 py-1 rounded-md inline-block mt-1">
-                    View code
-                  </p> */}
-                </div>
-                <div className="bento-card p-3 space-y-1 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors">
-                  <h3 className="text-sm font-semibold group-hover:text-blue-600">
-                    ADBMS Project
-                  </h3>
-                  <p className="text-xs text-foreground/70">
-                    Web-based restaurant management system
-                  </p>
-                  {/* <p className="text-xs text-foreground/50 font-mono bg-gray-200 dark:bg-gray-600 px-2 py-1 rounded-md inline-block mt-1">
-                    View code
-                  </p> */}
-                </div>
-                <div className="bento-card p-3 space-y-1 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors">
-                  <h3 className="text-sm font-semibold group-hover:text-blue-600">
-                    Computer Programming Project
-                  </h3>
-                  <p className="text-xs text-foreground/70">
-                    Product management system
-                  </p>
-                  {/* <p className="text-xs text-foreground/50 font-mono bg-gray-200 dark:bg-gray-600 px-2 py-1 rounded-md inline-block mt-1">
-                    View code
-                  </p> */}
                 </div>
               </div>
             </div>
+            {/* Certificates Section */}
+            <div className="bento-card p-4 col-span-1 md:col-span-6 space-y-3 group animate-fade-in bg-white dark:bg-gray-800 rounded-xl shadow-[0_1px_3px_rgba(0,0,0,0.1)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.12)] transition-all duration-300">
+              <h2 className="text-lg font-bold">Certificates & Achievements</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-2">
+                {[
+                  {
+                    title: "CCST Networking",
+                    issuer: "Cisco",
+                    url: "https://www.credly.com/badges/9b2950e2-e924-4f06-8bb1-9dbf6cdf16de/public_url",
+                  },
+                  {
+                    title: "AWS Academy Cloud Foundations",
+                    issuer: "AWS Academy",
+                    url: "https://www.credly.com/badges/cffc4ec7-f1c8-4d04-9448-3e08dd502f21/public_url",
+                  },
+                  {
+                    title: "NetRiders General Certificate",
+                    issuer: "Cisco NetRiders",
+                    url: "https://web.cvent.com/survey/certificate/928d2a35-f1b6-4c5d-b1d3-842264641967?r=b1241271-1e30-4eae-8efe-a22ec8109179&code=NetRiders+General+Certificate",
+                  },
+                  {
+                    title: "General Certificate",
+                    issuer: "Cisco",
+                    url: "https://web.cvent.com/survey/certificate/784cbc60-b3af-4da3-8984-22f43d5882af?r=02ad10b9-0103-41ac-9fa2-2c9e39bf228a&code=General+Certificate",
+                  },
+                  {
+                    title: "PhilNITS Passer",
+                    issuer: "PhilNITS / JITEC",
+                    url: "https://www.facebook.com/share/18fbifhZvX/",
+                  },
+                  {
+                    title: "Hack4Gov 2026 — 5th Place",
+                    issuer: "Hack4Gov",
+                    url: "https://www.facebook.com/share/p/1CYee8sgmT/",
+                  },
+                  {
+                    title: "Young Lifters Program 2026",
+                    issuer: "Participant",
+                    url: null,
+                  },
+                ].map((cert) => (
+                  <div
+                    key={cert.title}
+                    className="bento-card p-3 space-y-1 bg-gray-50 dark:bg-gray-700 rounded-lg transition-colors flex flex-col justify-between"
+                  >
+                    <div>
+                      <h3 className="text-sm font-semibold leading-snug">
+                        {cert.title}
+                      </h3>
+                      <p className="text-xs text-foreground/70 mt-0.5">
+                        {cert.issuer}
+                      </p>
+                    </div>
+                    {cert.url && (
+                      <a
+                        href={cert.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-2 inline-flex items-center gap-1 text-[10px] text-blue-600 dark:text-blue-400 hover:underline"
+                      >
+                        View credential
+                        <svg
+                          aria-hidden="true"
+                          className="w-3 h-3"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={1.5}
+                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                          />
+                        </svg>
+                      </a>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+
             {/* About Section */}
             <div className="bento-card p-5 col-span-1 md:col-span-4 space-y-2 group animate-fade-in bg-white dark:bg-gray-800 rounded-xl shadow-[0_1px_3px_rgba(0,0,0,0.1)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.12)] transition-all duration-300">
               <h2 className="text-lg font-bold">About</h2>
@@ -312,11 +368,12 @@ export default function Home() {
               </p>
               <div className="space-y-1">
                 <a
-                  href="mailto:your.email@example.com"
+                  href="mailto:tosinomatthew@gmail.com"
                   className="group p-1.5 rounded-md bg-foreground/5 hover:bg-foreground/10 transition-all duration-200 hover:-translate-y-0.5 block"
                 >
                   <div className="flex items-center gap-1 mb-0.5">
                     <svg
+                      aria-hidden="true"
                       className="w-4 h-4"
                       fill="none"
                       stroke="currentColor"
@@ -339,10 +396,13 @@ export default function Home() {
                 </a>
                 <a
                   href="https://github.com/Adamskiee"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="group p-1.5 rounded-md bg-foreground/5 hover:bg-foreground/10 transition-all duration-200 hover:-translate-y-0.5 block"
                 >
                   <div className="flex items-center gap-1 mb-0.5">
                     <svg
+                      aria-hidden="true"
                       className="w-4 h-4"
                       fill="currentColor"
                       viewBox="0 0 24 24"
